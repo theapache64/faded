@@ -20,8 +20,6 @@ class Faded {
 
             val alpha = calcAlpha(dueDate, daysDeadline)
 
-            Log.d("X", "Alpha is $alpha")
-
             ViewPump.init(
                 ViewPump.builder()
                     .addInterceptor(FadedInterceptor(alpha))
@@ -33,12 +31,12 @@ class Faded {
 
             val curDate = Calendar.getInstance().time
             val dueDate = parseDate(date)
-            if (dueDate.after(curDate)) {
+            if (curDate.after(dueDate)) {
                 // Due date expired, let's calc alpha
                 val daysPassed = getDaysPassed(curDate, dueDate)
                 val percentageFinished = (daysPassed * 100f) / daysDeadline
                 // converting to 0 - 1
-                return percentageFinished / 100
+                return 1f - (percentageFinished / 100)
 
             }
 

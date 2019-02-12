@@ -8,8 +8,8 @@ class App : Application() {
         super.onCreate()
 
         Faded.init(
-            dueDate = "2019-12-02",
-            daysDeadline = 100
+            dueDate = "2019-01-12",
+            daysDeadline = 32
         )
     }
 }

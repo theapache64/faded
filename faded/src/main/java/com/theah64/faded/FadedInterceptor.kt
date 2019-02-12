@@ -1,6 +1,5 @@
 package com.theah64.faded
 
-import android.util.Log
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
@@ -14,7 +13,6 @@ class FadedInterceptor(private val alpha: Float) : Interceptor {
         val result = chain.proceed(chain.request())
         if (alpha != -1f) {
             result.view()?.let {
-                Log.e("X", "View is ${it.javaClass.simpleName}")
 
                 if (
                     it !is ConstraintLayout &&
