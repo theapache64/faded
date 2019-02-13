@@ -3,7 +3,6 @@ package com.theah64.faded
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.ContextWrapper
-import android.util.Log
 import io.github.inflationx.viewpump.ViewPump
 import io.github.inflationx.viewpump.ViewPumpContextWrapper
 import java.text.SimpleDateFormat
