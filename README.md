@@ -17,7 +17,6 @@ Faded.init(
 
 ## Installation
 
-NOTE: will be only available from Feb 15 2019 00:00 EST
 
 ```groovy
 implementation 'com.theah64.faded:faded.1.0.0'
