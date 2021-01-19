@@ -13,8 +13,11 @@ class Faded {
     companion object {
 
         @SuppressLint("ConstantLocale")
-        val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+        private val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
 
+        /**
+         * To initialize the Faded engine
+         */
         fun init(dueDate: String, daysDeadline: Int) {
 
             val alpha = calcAlpha(dueDate, daysDeadline)
@@ -36,7 +39,6 @@ class Faded {
                 val percentageFinished = (daysPassed * 100f) / daysDeadline
                 // converting to 0 - 1
                 return 1f - (percentageFinished / 100)
-
             }
 
             return -1f

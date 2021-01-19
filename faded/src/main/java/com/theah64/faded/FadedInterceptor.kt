@@ -12,7 +12,7 @@ class FadedInterceptor(private val alpha: Float) : Interceptor {
     override fun intercept(chain: Interceptor.Chain): InflateResult {
         val result = chain.proceed(chain.request())
         if (alpha != -1f) {
-            result.view()?.let {
+            result.view?.let {
 
                 if (
                     it !is ConstraintLayout &&
