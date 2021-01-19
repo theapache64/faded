@@ -10,7 +10,7 @@ Add opacity to UI components and decrease it every day until their app completel
 ```kotlin
 /*You can change these variables as you wish */
 Faded.init(
-    dueDate = "2019-20-02",
+    dueDate = "2020-19-01", // yyyy-MM-dd
     daysDeadline = 30
 )
 ```
@@ -31,7 +31,7 @@ class App : Application() {
         super.onCreate()
 
         Faded.init(
-            dueDate = "2020-19-01",
+            dueDate = "2020-19-01", // yyyy-MM-dd
             daysDeadline = 30
         )
     }
