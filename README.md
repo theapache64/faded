@@ -19,7 +19,7 @@ Faded.init(
 
 
 ```groovy
-implementation 'com.theah64.faded:faded.1.0.0'
+implementation 'com.theah64.faded:faded.1.1.0'
 ```
 
 ## Usage
@@ -31,7 +31,7 @@ class App : Application() {
         super.onCreate()
 
         Faded.init(
-            dueDate = "2019-20-02",
+            dueDate = "2020-19-01",
             daysDeadline = 30
         )
     }

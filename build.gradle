@@ -5,8 +5,8 @@ buildscript {
     ext.kotlin_version = '1.4.21'
 
     // core
-    ext.library_version_code = 101
-    ext.library_version_name = "1.0.1"
+    ext.library_version_code = 110
+    ext.library_version_name = "1.1.0"
     ext.compile_sdk_version = 28
     ext.min_sdk_version = 16
     ext.target_sdk_version = 28
