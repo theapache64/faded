@@ -9,7 +9,7 @@ class App : Application() {
 
         Faded.init(
             dueDate = "2021-01-10", // Jan 10, 2021
-            daysDeadline = 15
+            daysDeadline = 10
         )
     }
 }

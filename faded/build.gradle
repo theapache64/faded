@@ -49,7 +49,6 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
     implementation 'io.github.inflationx:viewpump:2.0.3'
 }
 repositories {

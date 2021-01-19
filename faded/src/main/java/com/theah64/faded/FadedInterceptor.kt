@@ -1,25 +1,22 @@
 package com.theah64.faded
 
-import android.widget.FrameLayout
-import android.widget.LinearLayout
-import android.widget.RelativeLayout
-import androidx.constraintlayout.widget.ConstraintLayout
+import android.util.Log
+import android.view.ViewGroup
 import io.github.inflationx.viewpump.InflateResult
 import io.github.inflationx.viewpump.Interceptor
 
 class FadedInterceptor(private val alpha: Float) : Interceptor {
+
+    init {
+        Log.d("FadedInterceptor", "Alpha is '$alpha'")
+    }
 
     override fun intercept(chain: Interceptor.Chain): InflateResult {
         val result = chain.proceed(chain.request())
         if (alpha != -1f) {
             result.view?.let {
 
-                if (
-                    it !is ConstraintLayout &&
-                    it !is RelativeLayout &&
-                    it !is LinearLayout &&
-                    it !is FrameLayout
-                ) {
+                if (it !is ViewGroup) {
                     it.alpha = alpha
                 }
             }
